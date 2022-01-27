@@ -28,8 +28,12 @@ public class Account {
         return accountBalance;
      }
 
-     public void setAccountBalance(double accountBalance){
+     private void setAccountBalance(double accountBalance){
         this.accountBalance = accountBalance;
+     }
+
+     public void deposite(Account account, double amount){
+        this.accountBalance += amount;
      }
 
     public static void transferBalance(Account fromAccount, Account toAccount, double amountToBeTransferred){

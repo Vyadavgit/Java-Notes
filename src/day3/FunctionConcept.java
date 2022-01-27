@@ -14,12 +14,18 @@ public class FunctionConcept {
 
         int g = 2;
         int h = 6;
-        int i = g+h;
-        addition(g, h);
+        int i = add(g, h);
+
     }
 
     public static void addition(int a, int b){
         int c = a + b;
         System.out.println(c);
+    }
+
+    public static int add(int a, int b){
+        int c = a + b;
+        System.out.println(c);
+        return c;
     }
 }

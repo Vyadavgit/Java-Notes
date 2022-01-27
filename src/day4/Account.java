@@ -1,12 +1,13 @@
 package day4;
 
 public class Account {
+    private final float INTEREST_RATE = 0.05F;
+
     private String accountNumber;
     private String accountHolderName;
     private double accountBalance;
 
     // getters and setters fns
-
     public String getAccountNumber(){
         return accountNumber;
     }
@@ -36,5 +37,14 @@ public class Account {
         fromAccount.setAccountBalance(fromAccount.getAccountBalance()-amountToBeTransferred);
         toAccount.setAccountBalance(toAccount.getAccountBalance()+amountToBeTransferred);
 
+    }
+
+    // addInterest
+    public void addInterest(Account account){
+        double interest = (account.getAccountBalance() * 1 * INTEREST_RATE);
+        System.out.println("Principal Amount: " + account.getAccountBalance());
+        System.out.println("Interest Amount: " + interest);
+        account.setAccountBalance(account.getAccountBalance()+interest);
+        System.out.println("Account balance: " + account.getAccountBalance());
     }
 }

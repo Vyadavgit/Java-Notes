@@ -29,7 +29,7 @@ public class BankEncapsulation {
 
 //        account2.setAccountBalance(account2.getAccountBalance()-500);
 //        account1.setAccountBalance(account1.getAccountBalance()+500);
-        account1. transferBalance(account2, account1, 1000);
+        account1.transferBalance(account2, account1, 1000);
 
         System.out.println("**********************After Transfer******************");
 //        System.out.println("Account 2: " + account2.accountBalance);
@@ -37,7 +37,7 @@ public class BankEncapsulation {
         System.out.println("Account 2: " + account2.getAccountBalance());
         System.out.println("Account 1: " + account1.getAccountBalance());
 
+        // interest calculation
+        account1.addInterest(account1);
     }
-
-
 }

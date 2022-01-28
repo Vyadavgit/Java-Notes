@@ -48,6 +48,45 @@ public class StringPractice {
 
         String trimmedString = s.trim();
 
+        String one = "one";
+        String anotherOne = "one";
+        Logger.getGlobal().info(String.valueOf(one == anotherOne)); //true
+        Logger.getGlobal().info(String.valueOf(one == "one")); //true
 
+        String differentOne = "one two".substring(0, 3);
+        Logger.getGlobal().info(differentOne); // one
+
+        Logger.getGlobal().info(String.valueOf((one==differentOne))); // false note: "==" checks if it is the same location
+        Logger.getGlobal().info(String.valueOf((one.equals(differentOne)))); // true .equals checks for the content
+
+        Logger.getGlobal().info(String.valueOf("yes" == "Yes")); // false
+        Logger.getGlobal().info(String.valueOf("yes".equals("Yes"))); //false
+        Logger.getGlobal().info(String.valueOf("yes".equalsIgnoreCase("Yes"))); //true
+
+        String dirtyString = "Taman&Neupane";
+        String cleanedString = dirtyString.replace("&", " ");
+        Logger.getGlobal().info(cleanedString);
+
+        String commaSeparatedString = "Taman,Neupane";
+        String [] separateStringArray = commaSeparatedString.split(",");
+
+        Logger.getGlobal().info(separateStringArray[0]); //Taman
+        Logger.getGlobal().info(separateStringArray[1]); //Neupane
+
+        boolean decision = commaSeparatedString.startsWith("T");
+        Logger.getGlobal().info(String.valueOf((decision))); // true
+
+        // Builder pattern
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("I");
+        stringBuilder.append(" ");
+        stringBuilder.append("am");
+        stringBuilder.append(" ");
+        stringBuilder.append("Java");
+        stringBuilder.append(" ");
+        stringBuilder.append("Tutor");
+
+        String concatString = stringBuilder.toString();
+        Logger.getGlobal().info(String.valueOf(concatString)); // I am Java Tutor
     }
 }

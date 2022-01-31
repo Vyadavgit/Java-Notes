@@ -5,7 +5,7 @@ public class BankEncapsulation {
         Account account1 = new Account();
         account1.setAccountNumber("1");
         account1.setAccountHolderName("ABC");
-        account1.deposite(account1, 500);
+        account1.deposit(500);
 //        account1.accountNumber = "1";
 //        account1.accountHolderName = "ABC";
 //        account1.accountBalance = 500;
@@ -13,7 +13,7 @@ public class BankEncapsulation {
         Account account2 = new Account();
         account2.setAccountNumber("2");
         account2.setAccountHolderName("Ram");
-        account2.deposite(account2, 20000);
+        account2.deposit( 20000);
 //        account2.accountNumber = "2";
 //        account2.accountHolderName = "Ram";
 //        account2.accountBalance = 1000;

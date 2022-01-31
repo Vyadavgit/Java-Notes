@@ -32,7 +32,7 @@ public class Account {
         this.accountBalance = accountBalance;
      }
 
-     public void deposite(Account account, double amount){
+     public void deposit(double amount){
         this.accountBalance += amount;
      }
 

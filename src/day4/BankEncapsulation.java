@@ -38,6 +38,6 @@ public class BankEncapsulation {
         System.out.println("Account 1: " + account1.getAccountBalance());
 
         // interest calculation
-        account1.addInterest(account1);
+        account1.addInterest();
     }
 }

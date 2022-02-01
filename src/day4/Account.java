@@ -44,11 +44,11 @@ public class Account {
     }
 
     // addInterest
-    public void addInterest(Account account){
-        double interest = (account.getAccountBalance() * 1 * INTEREST_RATE);
-        System.out.println("Principal Amount: " + account.getAccountBalance());
+    public void addInterest(){
+        double interest = (this.getAccountBalance() * 1 * INTEREST_RATE);
+        System.out.println("Principal Amount: " + this.getAccountBalance());
         System.out.println("Interest Amount: " + interest);
-        account.setAccountBalance(account.getAccountBalance()+interest);
-        System.out.println("Account balance: " + account.getAccountBalance());
+        this.setAccountBalance(this.getAccountBalance()+interest);
+        System.out.println("Account balance: " + String.format("%8.3f", this.getAccountBalance()));
     }
 }

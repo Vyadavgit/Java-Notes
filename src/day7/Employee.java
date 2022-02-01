@@ -5,8 +5,8 @@ import java.util.Objects;
 import java.util.logging.Logger;
 
 public class Employee {
-    private String name; // required
-    private double salary; // required
+    private String name = ""; // required
+    private double salary = 0; // required
     private LocalDate joiningDate; // required
     private int age; // optional
 
@@ -16,6 +16,16 @@ public class Employee {
         this.name =Objects.requireNonNullElse(name, "Unknown");
         this.salary = salary;
         this.joiningDate = Objects.requireNonNullElse(joiningDate, LocalDate.now());
+    }
+
+    public Employee(String name, double salary, LocalDate joiningDate, int age){
+        this(name, salary, joiningDate);
+        //        Logger.getGlobal().info("Constructor called");
+//        this.name =Objects.requireNonNullElse(name, "Unknown");
+//        this.salary = salary;
+//        this.joiningDate = Objects.requireNonNullElse(joiningDate, LocalDate.now());
+        this.age = age;
+
     }
 
     public void setAge(int age){

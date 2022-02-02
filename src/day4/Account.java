@@ -50,5 +50,6 @@ public class Account {
         System.out.println("Interest Amount: " + interest);
         this.setAccountBalance(this.getAccountBalance()+interest);
         System.out.println("Account balance: " + String.format("%8.3f", this.getAccountBalance()));
+        System.out.println(String.format("Account balance: %8.3f", this.getAccountBalance())); //same result as above
     }
 }

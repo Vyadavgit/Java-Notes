@@ -25,10 +25,8 @@ public class ArrayPractice {
                 updatedArray[i] = a[i];
             }
         }
-        int j = 0;
         for (int i: updatedArray){
             System.out.println(i);
-            j++;
         }
 //
 //        int zeroPosition = a[0];
@@ -40,6 +38,8 @@ public class ArrayPractice {
 
         int[] primenumbers = {2, 3, 5, 7, 11, 13};
         int[] copyOfPrimeNumbers = Arrays.copyOf(primenumbers, primenumbers.length);
+//        int[] copyOfPrimeNumbers = primenumbers; // changes the elements of the original array as well so use the approach above to copy an array
+
         copyOfPrimeNumbers[0] = 0;
         Logger.getGlobal().info(String.valueOf((primenumbers[0])));
 
